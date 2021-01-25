@@ -1,15 +1,14 @@
 import React from 'react';
+import { StyledContainer, Subtitle, Title } from '../../styles/core';
 
-export function Home() {
+export const Home = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Welcome to the HR App!</h1>
-        <p>Here you will find:</p>
-        <li>Departaments</li>
-        <li>Employees</li>
-        <li>Salary reports</li>
-      </header>
-    </div>
+    <StyledContainer>
+      <Title>Welcome to the HR App!</Title>
+      <Subtitle>
+        Here you will find info about our departments, employees and salary
+        reports
+      </Subtitle>
+    </StyledContainer>
   );
-}
+};

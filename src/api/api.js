@@ -4,8 +4,8 @@ const instance = axios.create({
   baseURL: 'http://localhost:8000',
 });
 
-export async function getDepartaments() {
-  const response = await instance.get('/departaments/');
+export async function getDepartments() {
+  const response = await instance.get('/departments/');
   return response.data;
 }
 
@@ -14,12 +14,17 @@ export async function getEmployees() {
   return response.data;
 }
 
-export async function getSalaryStatsPerDepartament() {
+export async function createEmployee(employee) {
+  const response = await instance.post('/employee/new/', employee);
+  return response;
+}
+
+export async function getSalaryStatsPerDepartment() {
   const response = await instance.get('/salary/stats/');
   return response.data;
 }
 
-export async function getSalaryStatsHigherThan() {
-  const response = await instance.get('/salary/stats/higherThan/');
+export async function getSalaryStatsHigherThan(amount) {
+  const response = await instance.get(`/salary/higherThan/${amount}/`);
   return response.data;
 }

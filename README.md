@@ -4,7 +4,13 @@
 
 ## Get started
 
-To launch the front-end app in dev mode, run the following command:
+To launch the front-end app in dev mode, first run this command to install the dependencies:
+
+```
+yarn install
+```
+
+After this, run the following command to launch it:
 
 ```
 yarn start

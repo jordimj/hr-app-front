@@ -11,8 +11,10 @@ import {
   StyledSelect,
 } from '../../../styles/core';
 import { euroFormatter } from '../../../utils/helpers';
+import { Spinner } from '../../UI/Spinner/Spinner';
 
 export const HigherSalaries = () => {
+  const loading = useSelector((state) => state.loading);
   const higherSalariesReport = useSelector(
     (state) => state.reports.higherSalaries
   );
@@ -46,7 +48,9 @@ export const HigherSalaries = () => {
           <option value="90000">90k</option>
           <option value="100000">100k</option>
         </StyledSelect>
-        {higherSalariesReport.length === 0 ? (
+        {loading ? (
+          <Spinner />
+        ) : higherSalariesReport.length === 0 ? (
           <p>
             There are no departments with two salaries over{' '}
             {euroFormatter(salary)}

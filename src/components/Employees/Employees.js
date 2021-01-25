@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import * as actions from '../../actions/actions';
 import { StyledContainer, Title } from '../../styles/core';
-import { Table } from '../UI/Table';
+import { Table } from '../UI/Table/Table';
 import { CreateEmployee } from './CreateEmployee/CreateEmployee';
 import { Spinner } from '../UI/Spinner/Spinner';
 

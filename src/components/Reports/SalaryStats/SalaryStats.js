@@ -1,9 +1,8 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import styled from 'styled-components';
 import * as actions from '../../../actions/actions';
 import { StyledContainer, Title, Subtitle } from '../../../styles/core';
-import { Table } from '../../UI/Table';
+import { Table } from '../../UI/Table/Table';
 import { Spinner } from '../../UI/Spinner/Spinner';
 
 export const SalaryStats = () => {

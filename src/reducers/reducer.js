@@ -56,9 +56,15 @@ export const reducer = (state = initialState, action) => {
         error: null,
       };
     case actionTypes.createEmployeeSuccessed:
+      const department = state.departments.find(
+        (department) => department.id === action.employee.department
+      );
+
+      const employee = { ...action.employee, department: department.name };
+
       return {
         ...state,
-        employees: [...state.employees, action.employee],
+        employees: [...state.employees, employee],
         loading: false,
       };
     case actionTypes.createEmployeeFailed:

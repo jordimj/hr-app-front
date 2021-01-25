@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledTable } from '../../styles/core';
+import { StyledTable } from '../../../styles/core';
 
 const TableMarkup = ({ titles, data }) => (
   <StyledTable>

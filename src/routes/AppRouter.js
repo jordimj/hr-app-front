@@ -2,7 +2,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import { Home } from '../components/Home/Home';
 import { Departments } from '../components/Departments/Departments';
-import { Navbar } from '../components/UI/Navbar';
+import { Navbar } from '../components/UI/Navbar/Navbar';
 import { Employees } from '../components/Employees/Employees';
 import { HigherSalaries } from '../components/Reports/HigherSalaries/HigherSalaries';
 import { SalaryStats } from '../components/Reports/SalaryStats/SalaryStats';

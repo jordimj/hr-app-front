@@ -97,13 +97,8 @@ export const createEmployee = (employee) => {
   return async (dispatch) => {
     dispatch(createEmployeeStarted());
 
-    console.log(employee);
-
     try {
       await API.createEmployee(employee);
-
-      employee.department = 'Dev';
-      console.log(employee);
       dispatch(createEmployeeSuccessed(employee));
     } catch (error) {
       dispatch(createEmployeeFailed(error));

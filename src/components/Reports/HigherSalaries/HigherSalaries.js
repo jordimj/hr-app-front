@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import * as actions from '../../../actions/actions';
+import { salarySelectOptions } from '../../../constants';
 import {
   ListContainer,
   StyledContainer,
@@ -39,14 +40,9 @@ export const HigherSalaries = () => {
       </Subtitle>
       <StyledFlex>
         <StyledSelect value={salary} onChange={salarySelectedHandler}>
-          <option value="30000">30k</option>
-          <option value="40000">40k</option>
-          <option value="50000">50k</option>
-          <option value="60000">60k</option>
-          <option value="70000">70k</option>
-          <option value="80000">80k</option>
-          <option value="90000">90k</option>
-          <option value="100000">100k</option>
+          {salarySelectOptions.map((option) => (
+            <option value={option}>{euroFormatter(option)}</option>
+          ))}
         </StyledSelect>
         {loading ? (
           <Spinner />

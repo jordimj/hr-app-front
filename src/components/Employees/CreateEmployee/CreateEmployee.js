@@ -1,6 +1,7 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import * as actionTypes from '../../../actions/actions';
+import { departments } from '../../../constants';
 import { useForm } from '../../../hooks/useForm';
 import {
   Subtitle,
@@ -24,7 +25,6 @@ export const CreateEmployee = () => {
   );
 
   const { name, surname, salary, department } = formData;
-  const departments = useSelector((state) => state.departments);
 
   return (
     <>
